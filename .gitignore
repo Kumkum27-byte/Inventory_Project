@@ -1,0 +1,70 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+myenv/
+
+# Environment variables / secrets
+.env
+.env.*
+*.env
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test / coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build / distribution artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Logs
+*.log
+logs/
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+
+# Local database / generated data
+*.sqlite3
+*.db
+*.bak
+
+# OS files
+Thumbs.db
+
+# Streamlit / app generated files
+.streamlit/
+
+# Machine learning / temp files
+models/
+*.joblib
+*.pkl
+*.h5
+*.hdf5
+
+# FastAPI / generated docs
+.openapi.json
+
+# Optional: ignore local project output files if generated
+output/
+tmp/
+cache/
