@@ -8,7 +8,7 @@ API_URL = "http://127.0.0.1:8000"
 st.set_page_config(page_title="Inventory Dashboard", layout="wide")
 st.title("📦 Inventory & Demand Forecasting Dashboard")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Products", "Inventory", "Stock Movement", "Low Stock Alerts"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Products", "Inventory", "Stock Movement", "Low Stock Alerts", "Ask Copilot"])
 
 # ---------------- TAB 1: PRODUCTS ----------------
 with tab1:
@@ -73,3 +73,18 @@ with tab4:
             st.dataframe(pd.DataFrame(data), use_container_width=True)
         else:
             st.info("No products below reorder level right now.")
+
+# -----------------TAB 5 : ASSISTANT---------------------
+# ---------------- TAB 5: ASK COPILOT ----------------
+with tab5:
+    st.subheader("Ask the Inventory Copilot")
+    question = st.text_input("Ask a question (e.g. 'which products are low on stock?')")
+    if st.button("Ask"):
+        if question:
+            res = requests.post(f"{API_URL}/assistant/query", json={"question": question})
+            if res.status_code == 200:
+                st.success(res.json()["answer"])
+            else:
+                st.error(res.json())
+        else:
+            st.warning("Please type a question first.")

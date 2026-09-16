@@ -6,7 +6,7 @@ import models, schemas
 
 router = APIRouter(prefix='/assistant', tags=['Assistant'])
 
-@router.get('/query')
+@router.post('/query')
 def get_assistant(query : schemas.AssistantQuery, db : Session = Depends(get_db)):
-    result = ask_copilot(query, db)
+    result = ask_copilot(query.question, db)
     return {"answer" : result}
