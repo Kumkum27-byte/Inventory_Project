@@ -11,3 +11,4 @@ streamlit
 xgboost 
 scikit-learn 
 joblib
+google-genai
