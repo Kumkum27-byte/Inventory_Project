@@ -26,6 +26,7 @@ class Product(Base):
     supplier_id = Column(Integer, ForeignKey('suppliers.id'))
     reorder_level = Column(Integer, default=10)
     unit_price = Column(Float, nullable=False)
+    image_url = Column(String)      # link to the product image
 
     category = relationship("Category", back_populates='products')
     supplier = relationship("Supplier", back_populates='products')

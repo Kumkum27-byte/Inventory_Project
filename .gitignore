@@ -54,6 +54,13 @@ Thumbs.db
 # Streamlit / app generated files
 .streamlit/
 
+# JavaScript / Next.js
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+
 # Machine learning / temp files
 models/
 *.joblib

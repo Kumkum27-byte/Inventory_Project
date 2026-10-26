@@ -30,4 +30,8 @@ A full-stack inventory management system with ML-based demand forecasting and a 
 - `POST /products/`, `GET /products/`
 - `POST /inventory/stock-movement`, `GET /inventory/`, `GET /inventory/low-stock`
 - `GET /forecasts/{product_id}?horizon=7`
+<<<<<<< HEAD
 - `POST /assistant/query`
+=======
+- `POST /assistant/query`
+>>>>>>> 2bb20e3 (Updated frontend and backend)
